@@ -1,4 +1,6 @@
 const Contact = () => {
+
+
   return (
     <div
       className="w-full  bg-cover bg-no-repeat"
@@ -8,7 +10,7 @@ const Contact = () => {
         <div className="p-8">
           <div className="flex justify-start items-center gap-4">
             <span className="bg-[#fc2e2e] block w-[10px] h-[10px] "></span>
-            <h4 className="my-2 text-[#BD1F17]  font-bold ">Book Now</h4>
+            <h4 className="my-2 text-[#BD1F17] font-bold ">Book Now</h4>
           </div>
           <h2 className="text-6xl text-white font-bold font-bebasNeue">
             Book Your Table
@@ -17,6 +19,7 @@ const Contact = () => {
             Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo
             molestie vel, ornare non id blandit netus.
           </p>
+
           {/* contect Form  */}
           <div className="grid lg:grid-cols-2 items-start gap-12 ">
             <form className="space-y-8">
@@ -32,20 +35,20 @@ const Contact = () => {
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full  py-2.5 px-4 border bg-transparent text-sm outline-[#007bff]"
+                    className="w-full py-2.5 px-4 border bg-transparent text-sm outline-[#007bff]"
                   />
                 </div>
                 <div>
                   <input
                     type="date"
-                    className="w-full  py-2.5 px-4 border bg-transparent text-sm  outline-[#007bff]"
+                    className="w-full py-2.5 px-4 border bg-transparent text-sm  outline-[#007bff]"
                   />
                 </div>
                 <div>
                   <input
                     type="number"
                     placeholder="Total People"
-                    className="w-full  py-2.5 px-4 border bg-transparent  text-sm outline-[#007bff]"
+                    className="w-full py-2.5 px-4 border bg-transparent  text-sm outline-[#007bff]"
                   />
                 </div>
               </div>
