@@ -3,8 +3,8 @@ import MainLayOut from "../layout/MainLayOut";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-// import Errors from './../erros/Errors';
-import Services from "../pages/Services";
+import Errors from './../erros/Errors';
+
 
 
 
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayOut />,
-    // errorElement: <Errors />,
+    errorElement: <Errors />,
     children:
       [
         {
@@ -27,10 +27,6 @@ export const router = createBrowserRouter([
         {
           path: "/contact",
           element: <Contact />
-        },
-        {
-          path: "/services",
-          element: <Services />
         },
       ]
   },

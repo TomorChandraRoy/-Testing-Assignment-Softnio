@@ -6,13 +6,13 @@ const About = () => {
         <div className="relative mt-5 md:mt-10 lg:mt-20">
           <img
             className="w-[24rem] h-[20rem] md:w-[43rem] lg:w-[43rem] lg:h-[30rem] lg:mx-10 object-cover"
-            src="/src/utils/image/about.png"
+            src="/image/about.png"
             alt="image"
           />
             <div>
                 <p className="absolute bg-[#FFFFFF] rounded-3xl p-10 top-[2rem] left-5 lg:left-20 right-10 w-[11rem] h-[6rem] lg:-bottom-[9.2rem] lg:w-[15rem] lg:h-[8rem] lg:right-2"></p>
                 <div className="relative">
-                <img src="/src/utils/image/content (1).png" alt="" className="absolute  p-2 -top-[284px] left-5 lg:left-20 w-[11rem] lg:-bottom-[9.2rem] lg:-top-[27.4rem] lg:w-[14rem] lg:right-2"/>
+                <img src="/image/content (1).png" alt="" className="absolute  p-2 -top-[284px] left-5 lg:left-20 w-[11rem] lg:-bottom-[9.2rem] lg:-top-[27.4rem] lg:w-[14rem] lg:right-2"/>
               </div>
             </div>
         </div>
@@ -52,7 +52,7 @@ const About = () => {
                   Book a table
                  </button>
                  <div className="flex justify-center items-center gap-3">
-                    <img src="/src/utils/image/call.png" alt="" />
+                    <img src="/image/call.png" alt="" />
                     <p className="font-medium">+88 3426 739 485</p>
                  </div>              
                 </div>
@@ -91,7 +91,7 @@ const About = () => {
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 lg:gap-[14.5rem] px-5 lg:my-[5rem] my-6 ">
         <div >
           <div className="flex items-center gap-5 ">
-            <img src="/src/utils/image/Vector 2.png" alt="" className=" border bg-white p-6 rounded-full" />
+            <img src="/image/Vector 2.png" alt="" className=" border bg-white p-6 rounded-full" />
             <div>
                 <h3 className="text-2xl font-bold mb-2 text-black uppercase font-raleway">
                  fast delivery
@@ -104,7 +104,7 @@ const About = () => {
         </div>
         <div >
           <div className="flex  items-center gap-5 ">
-            <img src="/src/utils/image/medal.png" alt="" className=" border bg-white p-6 rounded-full" />
+            <img src="/image/medal.png" alt="" className=" border bg-white p-6 rounded-full" />
             <div>
                 <h3 className="text-2xl font-bold mb-2 text-black uppercase font-raleway">
                  absolute dining 
@@ -117,7 +117,7 @@ const About = () => {
         </div>
         <div>
           <div className="flex items-center gap-5 ">
-            <img src="/src/utils/image/bag.png" alt="" className=" border bg-white p-6 rounded-full" />
+            <img src="/image/bag.png" alt="" className=" border bg-white p-6 rounded-full" />
             <div>
                 <h3 className="text-2xl font-bold mb-2 text-black uppercase font-raleway">
                   pickup delivery
