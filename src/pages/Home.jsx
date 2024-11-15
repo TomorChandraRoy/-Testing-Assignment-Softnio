@@ -8,7 +8,7 @@ import Testimonial from "./../components/homeComponents/Testimonial";
 const Home = () => {
   return (
     <div>
-      {/* <Banner/> */}
+      <Banner/>
       <About/>
       <Carousel/>
       <Contact />

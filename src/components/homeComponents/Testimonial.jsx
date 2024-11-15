@@ -2,16 +2,21 @@ import { useEffect, useRef, useState } from "react";
 import KeenSlider from "keen-slider";
 import "keen-slider/keen-slider.min.css";
 const Testimonial = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const sliderRef = useRef(null);
   const keenSliderInstance = useRef(null);
   const [Testi, setTesti] = useState([]);
-  
+  const [playingVideos, setPlayingVideos] = useState([]);
+
   // Fetch data from JSON file
   useEffect(() => {
     fetch("/data/testiData.json")
       .then((response) => response.json())
-      .then((data) => setTesti(data))
+      .then((data) => {
+        {
+          setTesti(data);
+          setPlayingVideos(new Array(data.length).fill(false));
+        }
+      })
       .catch((error) => console.error("Error loading data:", error));
   }, []);
 
@@ -44,8 +49,11 @@ const Testimonial = () => {
     }
   }, [Testi]);
 
-  const handlePlay = () => {
-    setIsPlaying(true);
+  // Handle play button click
+  const handlePlay = (index) => {
+    const updatedPlayingVideos = new Array(Testi.length).fill(false);
+    updatedPlayingVideos[index] = true; // Only set the current video to playing
+    setPlayingVideos(updatedPlayingVideos);
   };
 
   return (
@@ -114,13 +122,13 @@ const Testimonial = () => {
                     key={index}
                     className=" keen-slider__slide border-e-red-600"
                   >
-                    <div className="grid md:grid-cols-2 items-center flex-col-reverse md:flex-row bg-red-400  border border-green-400  ">
+                    <div className="grid md:grid-cols-2 items-center flex-col-reverse md:flex-row ">
                       <div className="order-2 md:order-1 bg-[#FEBF00] py-[2.6rem] md:pb-[2rem] lg:pb-[4.3rem] lg:pt-[1.8rem] px-4 relative ">
                         <div className="max-w-[26rem]  mx-auto">
                           <div className="flex items-center mx-auto py-[3.7rem] md:pt-[1.1rem] max-w-md">
                             <p className="font-normal text-base font-roboto">
                               <img
-                                src="/public/image/test.png"
+                                src="/image/test.png"
                                 alt="test"
                                 className="my-2"
                               />
@@ -130,14 +138,14 @@ const Testimonial = () => {
                           <div className="flex items-center rounded-3xl max-w-md my-7 gap-5">
                             <div className="mr-4">
                               <h4 className="text-gray-800 text-base font-bold">
-                                Khalid Al Dawsry
+                                {item.name}
                               </h4>
                               <p className="text-sm text-black mt-2">
-                                Jeddah, Saudi
+                                {item.title}
                               </p>
                             </div>
                             <img
-                              src="https://readymadeui.com/profile_3.webp"
+                              src="https://i.ibb.co.com/jDCdnQz/Img1.png"
                               className="w-10 h-10 rounded-full ml-auto"
                             />
                           </div>
@@ -148,7 +156,7 @@ const Testimonial = () => {
                         </div>
                         <img
                           className="absolute left-0 bottom-4  h-10 lg:w-20 lg:h-20 lg:-left-[1.1rem]"
-                          src="/public/image/slider2.svg"
+                          src="/image/slider2.svg"
                           alt=""
                         />
                       </div>
@@ -156,19 +164,19 @@ const Testimonial = () => {
                         <div
                           className="relative w-full h-[24rem] bg-cover bg-center"
                           style={{
-                            backgroundImage: `url('/public/image/Video.png')`,
+                            backgroundImage: `url('/image/Video.png')`,
                           }}
                         >
-                          {!isPlaying ? (
+                          {!playingVideos[index] ? (
                             <button
-                              onClick={handlePlay}
+                              onClick={() => handlePlay(index)}
                               className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50"
                             >
-                              <img src="/public/image/Play.png" alt="play" />
+                              <img src="/image/Play.png" alt="play" />
                             </button>
                           ) : (
                             <video
-                              src="/public/image/Mutton curry recipe in Bangla - 720.mp4"
+                              src={item.video}
                               autoPlay
                               controls
                               className="w-full h-full object-cover"
@@ -198,7 +206,7 @@ const Testimonial = () => {
               className="w-32 h-30 2xl:w-[15rem] xl:w-[5rem] lg:w-[3.9rem]"
             />
           </div>
-          
+
           {/* arrow button for sm screens - Only visible on sm screens */}
           <div className="flex space-x-4 items-center justify-center md:hidden mt-4">
             <div

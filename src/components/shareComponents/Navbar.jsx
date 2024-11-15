@@ -27,7 +27,7 @@ const Navbar = () => {
           </Link>
 
           {/* Menu Links */}
-          <div className={`${isMenuOpen ? "block" : "hidden"} lg:flex lg:items-center lg:space-x-8 fixed lg:static inset-0 lg:inset-auto bg-[#151d20] lg:bg-transparent p-6 lg:p-0 lg:mr-[16rem]`}>
+          <div className={`${isMenuOpen ? "block" : "hidden"} lg:flex lg:items-center lg:space-x-8 fixed lg:static inset-0 lg:inset-auto bg-[#151d20] lg:bg-transparent p-6 lg:p-0 lg:mr-[4rem]`}>
             {/* Close button for mobile view */}
             <button
               onClick={handleToggle}

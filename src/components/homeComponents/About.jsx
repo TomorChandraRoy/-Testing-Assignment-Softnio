@@ -1,6 +1,13 @@
+import { useState } from "react";
+
 const About = () => {
+  const [activeTab, setActiveTab] = useState("about"); // ডিফল্ট ট্যাব 'home'
+
+  const handleTabClick = (tabName) => {
+    setActiveTab(tabName);
+  };
   return (
-    <div className="">
+    <div className="relative">
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:gap-10 justify-center items-center gap-5 lg:gap-[3.5rem]">
         <div className="relative mt-5 md:mt-10 lg:mt-20">
           <img
@@ -23,20 +30,32 @@ const About = () => {
         <div className="p-4 xl:mb-20">
           <ul className="flex ">
             <li
-              id="homeTab"
-              className="tab text-black font-bold text-base  hover:bg-red-500 hover:text-gray-100 py-3 px-6  cursor-pointer"
+              className={`tab py-3 px-6 cursor-pointer ${
+                activeTab === "about"
+                  ? "text-white font-bold bg-red-600 border-blue-600"
+                  : "text-gray-950 font-semibold"
+              }`}
+              onClick={() => handleTabClick("about")}
             >
               About
             </li>
             <li
-              id="contentTab"
-              className="tab text-black font-bold text-base text-center hover:bg-red-500 hover:text-gray-100 py-3 px-6  cursor-pointer"
+              className={`tab py-3 px-6 cursor-pointer ${
+                activeTab === "experience"
+                  ? "text-white font-bold bg-red-600 border-blue-600"
+                  : "text-gray-950 font-semibold"
+              }`}
+              onClick={() => handleTabClick("experience")}
             >
               Experience
             </li>
             <li
-              id="profileTab"
-              className="tab text-black font-bold text-base text-center hover:bg-red-500 hover:text-gray-100 py-3 px-6  cursor-pointer"
+              className={`tab py-3 px-6 cursor-pointer ${
+                activeTab === "contact"
+                  ? "text-white font-bold bg-red-600 border-blue-600"
+                  : "text-gray-950 font-semibold"
+              }`}
+              onClick={() => handleTabClick("contact")}
             >
               Contact
             </li>
@@ -44,49 +63,80 @@ const About = () => {
 
           <div className="border-b-2 w-full border-red-600"></div>
 
-          <div id="homeContent" className="tab-content max-w-2xl  mt-8 ">
-            <p className="text-[2rem] lg:text-[1.6rem] font-bold text-black font-raleway uppercase my-5">
-              Exceptional culinary <br /> experience and delicious food
-            </p>
-            <p className="text-base font-medium text-black my-5">
-              Our chefs bring together ingredients from around the globe to
-              create dishes that are both visually stunning and extraordinarily
-              flavorful. Each plate is an artful blend of tradition and
-              innovation, designed to satisfy and delight every palate.
-            </p>
-            <div className="flex justify-stretch items-center gap-5">
-              <button className="bg-[#FEBF00] h-[44px] w-[157px] gap-[10px] border border-none uppercase font-roboto font-bold">
-                Book a table
-              </button>
-              <div className="flex justify-center items-center gap-3">
-                <img src="/image/call.png" alt="" />
-                <p className="font-medium">+88 3426 739 485</p>
+          <div className=" max-w-2xl  mt-8 ">
+            {activeTab === "about" && (
+              <div>
+                <p className="text-[2rem] lg:text-[1.6rem] font-bold text-black font-raleway uppercase my-5">
+                  Exceptional culinary <br /> experience and delicious food
+                </p>
+                <p className="text-base font-medium text-black my-5">
+                  Our chefs bring together ingredients from around the globe to
+                  create dishes that are both visually stunning and
+                  extraordinarily flavorful. Each plate is an artful blend of
+                  tradition and innovation, designed to satisfy and delight
+                  every palate.
+                </p>
+                <div className="flex justify-stretch items-center gap-5">
+                  <button className="bg-[#FEBF00] h-[44px] w-[157px] gap-[10px] border border-none uppercase font-roboto font-bold">
+                    Book a table
+                  </button>
+                  <div className="flex justify-center items-center gap-3">
+                    <img src="/image/call.png" alt="" />
+                    <p className="font-medium">+88 3426 739 485</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
-          <div
-            id="contentContent"
-            className="tab-content max-w-2xl hidden mt-8"
-          >
-            <h4 className="text-lg font-bold text-gray-600">Content</h4>
-            <p className="text-sm text-gray-600 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              auctor auctor arcu, at fermentum dui. Maecenas vestibulum a turpis
-              in lacinia. Proin aliquam turpis at erat venenatis malesuada. Sed
-              semper, justo vitae consequat fermentum, felis diam posuere ante,
-              sed fermentum quam justo in dui.
-            </p>
+          {/* Experience */}
+          <div className=" max-w-2xl  mt-8 ">
+            {activeTab === "experience" && (
+              <div>
+                <p className="text-[2rem] lg:text-[1.6rem] font-bold text-black font-raleway uppercase my-5">
+                  Exceptional culinary <br /> experience and delicious food
+                </p>
+                <p className="text-base font-medium text-black my-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptas, cum porro autem vel possimus, ut a ea, quis
+                  cupiditate atque debitis maxime reiciendis optio aliquid quae
+                  cumque iure et voluptatibus!
+                </p>
+                <div className="flex justify-stretch items-center gap-5">
+                  <button className="bg-[#FEBF00] h-[44px] w-[157px] gap-[10px] border border-none uppercase font-roboto font-bold">
+                    Book a table
+                  </button>
+                  <div className="flex justify-center items-center gap-3">
+                    <img src="/image/call.png" alt="" />
+                    <p className="font-medium">+88 3426 739 485</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          <div
-            id="profileContent"
-            className="tab-content max-w-2xl hidden mt-8"
-          >
-            <h4 className="text-lg font-bold text-gray-600">Profile</h4>
-            <p className="text-sm text-gray-600 mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              auctor auctor arcu, at fermentum dui. Maecenas vestibulum a turpis
-              in lacinia.
-            </p>
+          {/*  */}
+          <div className=" max-w-2xl  mt-8 ">
+            {activeTab === "contact" && (
+              <div>
+                <p className="text-[2rem] lg:text-[1.6rem] font-bold text-black font-raleway uppercase my-5">
+                  Exceptional culinary <br /> experience and delicious food
+                </p>
+                <p className="text-base font-medium text-black my-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptas, cum porro autem vel possimus, ut a ea, quis
+                  cupiditate atque debitis maxime reiciendis optio aliquid quae
+                  cumque iure et voluptatibus!
+                </p>
+                <div className="flex justify-stretch items-center gap-5">
+                  <button className="bg-[#FEBF00] h-[44px] w-[157px] gap-[10px] border border-none uppercase font-roboto font-bold">
+                    Book a table
+                  </button>
+                  <div className="flex justify-center items-center gap-3">
+                    <img src="/image/call.png" alt="" />
+                    <p className="font-medium">+88 3426 739 485</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -147,7 +197,7 @@ const About = () => {
       </div>
       <div className="absolute right-0 top-[22rem] 2xl:top-[18rem] hidden lg:block lg:top-[27rem]">
         <img
-          src="/public/image/aboout.png"
+          src="/image/aboout.png"
           alt=""
           className="w-32 h-30 2xl:w-[15rem] xl:w-[9rem] lg:w-[7.9rem] "
         />

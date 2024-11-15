@@ -15,7 +15,7 @@ const Footer = () => {
         </h1>
         <div className="grid max-sm:grid-cols-1 max-lg:grid-cols-2 lg:grid-cols-4 gap-8 my-[4rem]">
           <div>
-          <img className="mx-auto " src="/public/image/clock.png" alt="" />
+          <img className="mx-auto " src="/image/clock.png" alt="" />
             <h4 className="text-white text-2xl my-6 uppercase font-bebasNeue font-normal">Opening hours</h4>
             <ul className="">
               <li>

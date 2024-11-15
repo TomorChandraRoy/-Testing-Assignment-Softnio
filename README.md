@@ -1,4 +1,3 @@
-# Client site Basic Setup 
 
 React vite Basic setup, Floder setup,React-router-dom setup, tailwindcss setup,firebase basic setup(Firebase is not installed. If you want to work on firebase you need to install firebase)
 

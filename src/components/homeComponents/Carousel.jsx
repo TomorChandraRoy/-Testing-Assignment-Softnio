@@ -171,11 +171,11 @@ const Carousel = () => {
             </div>
           </div>
         </div>
-        <div className=" absolute bottom-0 left-0 top-24 lg:top-[23rem] hidden lg:block">
+        <div className=" absolute bottom-0 left-0 top-24 lg:top-[16rem] hidden lg:block">
           <img
             src="/image/caro.png"
             alt=""
-            className=" h-30 2xl:w-[13rem] xl:w-[5rem] lg:w-[3.5rem]"
+            className=" h-30 2xl:w-[13rem] xl:w-[7rem] lg:w-[4.5rem]"
           />
         </div>
       </div>
