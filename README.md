@@ -1,18 +1,21 @@
 
-React vite Basic setup, Floder setup,React-router-dom setup, tailwindcss setup,firebase basic setup(Firebase is not installed. If you want to work on firebase you need to install firebase)
+## Live Demo
 
-## Description
-- **When working on your project, rename the .env file to .env.local**
-Hope this helps everyone.
+You can check the live project here: [Live Demo](https://softnio-task.netlify.app/)
+
+##### In this project, the following setups and implementations have been completed:
+
+In this project, React Vite Setup, Folder Structure Setup, React Router DOM Setup, Tailwind CSS Setup, Keen-Slider Setup and React-Icons Setup have been completed successfully. Also, data is dynamically fetched from a JSON format and displayed in the ul element. The entire site has been made responsive.
+
 
 ## Getting Started
 
-To clone and run this application, you'll need Git and Node.js (which comes with npm) installed on your computer. From your command line:
+To clone and run this application, you must have Git and Node.js installed on your computer. From your command line:
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/equine-tracker.git
+   git clone https://github.com/TomorChandraRoy/-Testing-Assignment-Softnio.git
    ```
 
 2. Navigate to the project directory:
@@ -32,12 +35,6 @@ To clone and run this application, you'll need Git and Node.js (which comes with
    ```bash
    npm run dev
    ```
-
-
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
 
 
 ## Authors
