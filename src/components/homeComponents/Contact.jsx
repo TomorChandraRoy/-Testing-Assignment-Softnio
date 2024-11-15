@@ -12,7 +12,7 @@ const Contact = () => {
             <span className="bg-[#fc2e2e] block w-[10px] h-[10px] "></span>
             <h4 className="my-2 text-[#BD1F17] font-bold ">Book Now</h4>
           </div>
-          <h2 className=" text-5xl md:text-5xl lg:text-6xl text-white font-bold font-bebasNeue">
+          <h2 className=" text-5xl md:text-5xl lg:text-5xl text-white font-bold font-bebasNeue">
             Book Your Table
           </h2>
           <p className="font-roboto font-normal text-lg my-5 max-w-[30rem]">

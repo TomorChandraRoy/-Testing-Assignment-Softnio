@@ -53,7 +53,7 @@ const Carousel = () => {
     <div>
       <div className="lg:p-12 p-6 bg-[#FBF7F2]  relative">
         <div className="max-w-6xl max-md:max-w-lg mx-auto">
-
+        <div className="grid md:grid-cols-3 gap-4 lg:justify-center lg:items-center">
           {/* text */}
           <div className="col-span-2">
             <div className="flex justify-start items-center gap-4">
@@ -62,7 +62,7 @@ const Carousel = () => {
                 Crispy, Every Bite Taste
               </h4>
             </div>
-            <h2 className="text-6xl my-3 text-black font-bold font-bebasNeue">
+            <h2 className="text-3xl my-3 text-black font-bold font-bebasNeue">
               POPULAR FOOD ITEMS
             </h2>
           </div>
@@ -103,6 +103,7 @@ const Carousel = () => {
                 ></path>
               </svg>
             </div>
+          </div>
           </div>
 
           {/* Carousel Content */}

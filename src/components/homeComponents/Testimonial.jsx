@@ -50,14 +50,14 @@ const Testimonial = () => {
 
   return (
     <div>
-      <div className="lg:p-12 p-6 font-[sans-serif] bg-white relative">
+      <div className="lg:p-12 p-6 bg-white relative">
         <div className="max-w-6xl max-md:max-w-lg mx-auto">
           <div className="grid md:grid-cols-3 gap-4 lg:justify-center lg:items-center">
             {/* text */}
             <div className="col-span-2">
               <div className="flex justify-start items-center gap-4">
                 <span className="bg-[#fc2e2e] block w-[10px] h-[10px] "></span>
-                <h4 className="my-2 text-[#BD1F17] font-bold">
+                <h4 className="my-2 text-[#BD1F17] font-bold font-roboto">
                   Crispy, Every Bite Taste
                 </h4>
               </div>
@@ -198,6 +198,7 @@ const Testimonial = () => {
               className="w-32 h-30 2xl:w-[15rem] xl:w-[5rem] lg:w-[3.9rem]"
             />
           </div>
+          
           {/* arrow button for sm screens - Only visible on sm screens */}
           <div className="flex space-x-4 items-center justify-center md:hidden mt-4">
             <div
