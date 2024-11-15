@@ -4,12 +4,13 @@ import Carousel from "../components/homeComponents/Carousel";
 import Contact from "../components/homeComponents/Contact";
 import Testimonial from "./../components/homeComponents/Testimonial";
 
+
 const Home = () => {
   return (
     <div>
-      {/* <Banner/> */}
-      {/* <About/> */}
-      {/* <Carousel/> */}
+      {/* <Banner/>
+      <About/> */}
+      <Carousel/>
       <Contact />
       <Testimonial />
     </div>

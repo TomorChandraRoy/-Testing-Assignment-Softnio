@@ -12,7 +12,7 @@ const Contact = () => {
             <span className="bg-[#fc2e2e] block w-[10px] h-[10px] "></span>
             <h4 className="my-2 text-[#BD1F17] font-bold ">Book Now</h4>
           </div>
-          <h2 className="text-6xl text-white font-bold font-bebasNeue">
+          <h2 className=" text-5xl md:text-5xl lg:text-6xl text-white font-bold font-bebasNeue">
             Book Your Table
           </h2>
           <p className="font-roboto font-normal text-lg my-5 max-w-[30rem]">
@@ -62,7 +62,7 @@ const Contact = () => {
               <div className="flex items-center col-span-full"></div>
               <button
                 type="button"
-                className="text-white w-max font-roboto font-bold bg-[#007bff] hover:bg-blue-600  text-sm px-6 py-3 mt-4 tracking-wide"
+                className="text-black w-max font-roboto font-bold bg-[#FEBF00] hover:bg-blue-600  text-sm px-6 py-3 mt-4 tracking-wide"
               >
                 Book Now
               </button>
